@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Senha do Wi-Fi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        img {
+            max-width: 50px; /* Reduzindo o tamanho da logo */
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <img src="JKL.png" alt="Logo da sua empresa">
+    <h1>Bem-vindo! Para obter a senha do Wi-Fi, siga nosso Instagram:</h1>
+    
+    <!-- Link ou botão clicável para redirecionar para o Instagram -->
+    <a href="https://www.instagram.com/jklpapelaria_/" target="_blank">Siga nosso Instagram</a>
+
+    <!-- Botão para exibir a senha -->
+    <button id="mostrarSenha">Exibir Senha</button>
+
+    <script>
+        // Função para exibir a senha do Wi-Fi
+        function exibirSenha() {
+            alert('Senha do Wi-Fi: jkl1234567');
+        }
+
+        // Adicionando um ouvinte de evento ao botão para chamar a função de exibir senha
+        document.getElementById('mostrarSenha').addEventListener('click', exibirSenha);
+    </script>
+</body>
+</html>
