@@ -36,35 +36,6 @@
             max-width: 150px; /* Reduzindo o tamanho da logo */
             margin-top: 70px;
         }
-        #wifiModal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            z-index: 9999;
-        }
-        #wifiModal h2 {
-            margin-top: 0;
-        }
-        #wifiModal p {
-            margin-bottom: 20px;
-        }
-        #wifiModal button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #wifiModal button:hover {
-            background-color: #0056b3;
-        }
     </style>
 </head>
 <body>
@@ -77,23 +48,15 @@
     <!-- Botão para solicitar conexão Wi-Fi -->
     <button id="solicitarWifi">Conectar-se ao Wi-Fi</button>
 
-    <!-- Modal para exibir a solicitação de conexão Wi-Fi -->
-    <div id="wifiModal">
-        <h2>Solicitação de Conexão Wi-Fi</h2>
-        <p>Por favor, conecte-se à rede Wi-Fi para obter acesso à internet.</p>
-        <p>Senha do Wi-Fi: jkl1234567</p>
-        <button onclick="fecharModal()">OK</button>
-    </div>
-
     <script>
-        // Função para fechar o modal
-        function fecharModal() {
-            document.getElementById('wifiModal').style.display = 'none';
-        }
-
-        // Função para exibir o modal de solicitação de conexão Wi-Fi
+        // Função para solicitar conexão Wi-Fi
         function solicitarConexaoWifi() {
-            document.getElementById('wifiModal').style.display = 'block';
+            // Simulação de solicitação de conexão ao Wi-Fi com o SSID e a senha especificados
+            if (confirm('Conectar-se à rede Wi-Fi "Cliente JKL Papelaria"?')) {
+                alert('Conectando ao Wi-Fi. Por favor, insira a senha: "jkl1234567"');
+            } else {
+                alert('Conexão Wi-Fi cancelada.');
+            }
         }
 
         // Adicionando um ouvinte de evento ao botão para chamar a função de solicitar conexão Wi-Fi
