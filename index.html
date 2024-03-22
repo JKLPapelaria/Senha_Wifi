@@ -36,6 +36,9 @@
             max-width: 150px; /* Reduzindo o tamanho da logo */
             margin-top: 70px;
         }
+        #qrcode {
+            margin-top: 20px; /* Adicionando margem para o código QR */
+        }
     </style>
 </head>
 <body>
@@ -61,8 +64,8 @@
         // Adicionando um ouvinte de evento ao botão para chamar a função de exibir senha
         document.getElementById('mostrarSenha').addEventListener('click', exibirSenha);
 
-        // Função para gerar o código QR
-        function gerarQR() {
+        // Chamando a função para gerar o QR após o carregamento da página
+        window.onload = function() {
             // URL que será codificada no QR (por exemplo, um link para sua página offline)
             var url = "https://www.instagram.com/jklpapelaria_/";
 
@@ -75,10 +78,7 @@
 
             // Instância da classe QRious para gerar o QR
             var qr = new QRious(qrConfig);
-        }
-
-        // Chamando a função para gerar o QR ao carregar a página
-        window.onload = gerarQR;
+        };
     </script>
 </body>
 </html>
