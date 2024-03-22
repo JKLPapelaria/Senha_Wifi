@@ -48,6 +48,10 @@
     <!-- Botão para exibir a senha -->
     <button id="mostrarSenha">Exibir Senha</button>
 
+    <!-- Div onde o código QR será exibido -->
+    <div id="qrcode"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
     <script>
         // Função para exibir a senha do Wi-Fi
         function exibirSenha() {
@@ -56,6 +60,25 @@
 
         // Adicionando um ouvinte de evento ao botão para chamar a função de exibir senha
         document.getElementById('mostrarSenha').addEventListener('click', exibirSenha);
+
+        // Função para gerar o código QR
+        function gerarQR() {
+            // URL que será codificada no QR (por exemplo, um link para sua página offline)
+            var url = "https://www.instagram.com/jklpapelaria_/";
+
+            // Configurações opcionais para o código QR
+            var qrConfig = {
+                size: 200, // Tamanho do código QR
+                element: document.getElementById("qrcode"), // Elemento HTML onde o QR será renderizado
+                value: url // Valor a ser codificado no QR
+            };
+
+            // Instância da classe QRious para gerar o QR
+            var qr = new QRious(qrConfig);
+        }
+
+        // Chamando a função para gerar o QR ao carregar a página
+        window.onload = gerarQR;
     </script>
 </body>
 </html>
